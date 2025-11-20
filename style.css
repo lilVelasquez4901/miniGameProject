@@ -1,0 +1,68 @@
+:root{
+    --base1: #051EF0;
+    --base2: #8505F0;
+    --base3: #3805F0;
+    --base4: #0568F0;
+    --base5: #D105F0;
+    --base6: #9F89F0;
+    --bg: #000000;
+    --bg2: #424146;
+    --accent: #ece586;
+}
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(270deg, var(--bg), var(--bg2));
+    }
+    h1{
+        color: var(--accent);
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration:overline;
+    }
+    p{
+        color: var(--accent);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #info{
+        color: var(--accent);
+        text-decoration: underline;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    div{
+        color: white;
+    }
+    #start{
+        position: absolute;
+        top: 60%;
+        right: 48.5%;
+    }
+    #gameArea {
+
+    }
+    #target {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #info {
+      margin-top: 1rem;
+    } 
+    #totalClicks {
+        color: var(--base5);
+        position: absolute;
+        top:97%;
+        right:80%;
+        visibility: hidden;
+    }
+    #reactionTime {
+        color: var(--base6);
+        position: absolute;
+        top:97%;
+        right:20%;
+        visibility: hidden;
+    }
+
