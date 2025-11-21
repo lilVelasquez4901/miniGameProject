@@ -1,29 +1,42 @@
-function playGame(){
-    let wait = 0;
-    let clicked = false;
-    const target = document.getElementById("button");
-    target.clientX = Math.ceil(Math.random()*window.innerWidth);
-    target.clientY = Math.ceil(Math.random()*window.innerHeight);
-    target.addEventListener("click",(e) => {
-        clicked = true;
-    });
-    let hits = 0;
-    while(hits < 20){
-        if (clicked){
-            console.log("CLLLIIICK");
-            while(wait < 100){
-                wait++;
-                console.log("waiting");
-            }
-            button.x = Math.ceil(Math.random()*window.innerWidth);
-            button.y = Math.ceil(Math.random()*window.innerHeight);
-            hits++;
-            clicked = false;
-        }
+let score = 0;
+let startT;
+let endT;
+const target = document.getElementById("button");
+function check4win(){
+    endT = Date.now();
+    if(score >= 11){
+        endGame();
+    } else {
+        score++;
+        target.style.visibility = "hidden";
+        setTimeout(teleport, 500);
+        allTimes.push(endT-startT);
     }
 }
+allTimes = [];
+function teleport(){
+    target.style.top = Math.ceil(Math.random()*1300)+"px";
+    target.style.left = Math.ceil(Math.random()*1300)+"px";
+    target.style.visibility = "visible";
+    startT = Date.now();
+}
 
-document.getElementById("start").addEventListener("click",(e) => {
+function playGame(){
+    target.addEventListener("click", check4win);
+    document.addEventListener("click",() => {
+        totalClicks++;
+    });
+}
+let totalClicks = 0;
+function endGame(){
+    target.removeEventListener("click", check4win);
+    allTimes.shift();
+    let average = (allTimes[0]+allTimes[1]+allTimes[2]+allTimes[3]+allTimes[4]+allTimes[5]+allTimes[6]+allTimes[7]+allTimes[8]+allTimes[9])/10;
+    document.getElementById("reactionTime").innerHTML = `Your average reaction time was ${average/1000} seconds`;
+    document.getElementById("missedClicks").innerHTML = `You missed ${totalClicks-12} clicks`;
+}
+
+document.getElementById("start").addEventListener("click",() => {
     document.getElementById("start").style.display = "none";
     playGame();
 });
