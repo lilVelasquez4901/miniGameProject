@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Mini-Game Project</h1>
-  <p>Choose one: Keyboard Mover, Mouse-Avoid, or Reaction Click Game.</p>
+  <p>Reaction Click Game.</p>
 
   <div id="gameArea">
     <div id="target"></div>
@@ -16,8 +16,25 @@
   <button id="start">Start</button>
   <p id="info">Click the button to begin! Targets will before you that you must click before they fade.</p>
 
-  <div id="totalClicks">total score</div>
-  <div id="reactionTime">your timing</div>
+  <div id="spawnMenu"> Select the spawn delay:
+  <input type="radio" name="selectSpawnDelay" id="1second" value="1">
+  <label for="1second">1 Second</label>
+  <input type="radio" name="selectSpawnDelay" id="2seconds" value="2">
+  <label for="2seconds">2 Seconds</label>
+  <input type="radio" name="selectSpawnDelay" id="3seconds" value="3">
+  <label for="3seconds">3 Seconds</label>
+  </div>
+  <div id="targetMenu">Select the target amounts:
+  <input type="radio" name="selectTargetAmount" id="number5" value="5">
+  <label for="5">5 Targets</label>
+  <input type="radio" name="selectTargetAmount" id="number10" value="10">
+  <label for="10">10 Targets</label>
+  <input type="radio" name="selectTargetAmount" id="number20" value="20">
+  <label for="20">20 Targets</label>
+  </div>
+  <div id="targetsRemaining">Targets remain</div>
+  <div id="missedClicks">Your score</div>
+  <div id="reactionTime">Your time</div>
   <!-- <div id="currentRound">round</div> -->
 
   <script src="script.js">

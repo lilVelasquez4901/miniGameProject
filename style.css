@@ -37,6 +37,7 @@
         right: 48.5%;
     }
     #gameArea {
+        background: var(--accent);
 
     }
     #target {
@@ -47,22 +48,58 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      visibility: hidden;
     }
     #info {
       margin-top: 1rem;
     } 
-    #totalClicks {
-        color: var(--base5);
+    #missedClicks {
+        color: var(--accent);
         position: absolute;
         top:97%;
         right:80%;
         visibility: hidden;
     }
     #reactionTime {
-        color: var(--base6);
+        color: var(--accent);
         position: absolute;
         top:97%;
         right:20%;
         visibility: hidden;
     }
-
+    #start{
+        border-radius: 1rem;
+        color: var(--accent);
+        background: linear-gradient(270deg, var(--bg), var(--bg2));
+        text-decoration: solid;
+    }
+    #targetsRemaining{
+        color: var(--accent);
+        position: absolute;
+        right: 20%;
+        visibility: hidden;
+    }
+    #selectedSpawnDelay{
+        color: var(--accent);
+        position: absolute;
+        right: 5%;
+    }
+    #selectedTargetAmount{
+        color: var(--accent);
+    }
+    label{
+        color: var(--accent);
+    }
+    input{
+        color: var(--accent);
+    }
+    #targetMenu{
+        position: absolute;
+        color: var(--accent);
+        right: 60%;
+    }
+    #spawnMenu{
+        position: absolute;
+        color: var(--accent);
+        left: 60%;
+    }
