@@ -7,24 +7,32 @@
     --base6: #9F89F0;
     --bg: #000000;
     --bg2: #424146;
-    --accent: #ece586;
+    --bgText: #ece586;
+    --light: #818181;
+    --light2: #ffffff;
+    --lightText: #545353
+
+    /* 
+    Dark Mode: linear-gradient(270deg, var(--bg), var(--bg2)) color: var(--bgText);
+    Light Mode: linear-gradient(270deg, var(--light), var(--light2)) color: var(--lightText);
+    */
 }
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: linear-gradient(270deg, var(--bg), var(--bg2));
+      background: linear-gradient(270deg, var(--light), var(--light2));
     }
     h1{
-        color: var(--accent);
+        color: var(--lightText);
         font-family: Arial, Helvetica, sans-serif;
         text-decoration:overline;
     }
     p{
-        color: var(--accent);
+        color: var(--lightText);
         font-family: Arial, Helvetica, sans-serif;
     }
     #info{
-        color: var(--accent);
+        color: var(--lightText);
         text-decoration: underline;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -35,15 +43,28 @@
         position: absolute;
         top: 60%;
         right: 48.5%;
+        border-radius: 1rem;
+        color: var(--lightText);
+        background: linear-gradient(270deg, var(--light), var(--light2));
+        text-decoration: solid;
+    }
+    #themeSwitcher{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        border-radius: 1rem;
+        color: var(--lightText);
+        background: linear-gradient(270deg, var(--light), var(--light2));
+        text-decoration: solid;
     }
     #gameArea {
-        background: var(--accent);
+        background: var(--lightText);
 
     }
     #target {
       width: 40px;
       height: 40px;
-      background: var(--accent);
+      background: var(--bgText);
       position: absolute;
       left: 50%;
       top: 50%;
@@ -54,52 +75,44 @@
       margin-top: 1rem;
     } 
     #missedClicks {
-        color: var(--accent);
+        color: var(--bgText);
         position: absolute;
         top:97%;
         right:80%;
         visibility: hidden;
     }
     #reactionTime {
-        color: var(--accent);
+        color: var(--bgText);
         position: absolute;
         top:97%;
         right:20%;
         visibility: hidden;
     }
-    #start{
-        border-radius: 1rem;
-        color: var(--accent);
-        background: linear-gradient(270deg, var(--bg), var(--bg2));
-        text-decoration: solid;
-    }
     #targetsRemaining{
-        color: var(--accent);
+        color: var(--bgText);
         position: absolute;
         right: 20%;
+        top: 97%;
         visibility: hidden;
     }
     #selectedSpawnDelay{
-        color: var(--accent);
+        color: var(--bgText);
         position: absolute;
         right: 5%;
     }
     #selectedTargetAmount{
-        color: var(--accent);
+        color: var(--bgText);
     }
     label{
-        color: var(--accent);
-    }
-    input{
-        color: var(--accent);
+        color: var(--lightText);
     }
     #targetMenu{
         position: absolute;
-        color: var(--accent);
+        color: var(--lightText);
         right: 60%;
     }
     #spawnMenu{
         position: absolute;
-        color: var(--accent);
+        color: var(--lightText);
         left: 60%;
     }
