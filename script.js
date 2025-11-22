@@ -29,6 +29,7 @@ function teleport(){
 }
 
 function playGame(){
+    // MAKE THE UI DISSAPPEAR
     score = 0;
     totalClicks = 0;
     allTimes.length = 0;
@@ -71,6 +72,7 @@ function endGame(){
     document.getElementById("reactionTime").style.visibility = "visible";
     document.getElementById("missedClicks").innerHTML = `You missed ${totalClicks-targets-1} clicks`;
     document.getElementById("missedClicks").style.visibility = "visible";
+    // MAKE UI REAPPEAR
 
     document.getElementById("start").style.visibility = "visible";
     target.style.visibility = "hidden";
