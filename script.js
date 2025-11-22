@@ -4,8 +4,10 @@ let endT;
 let targets;
 let waitTime;
 let totalClicks = 0;
+let remainTargets
 const target = document.getElementById("target");
 function check4win(){
+    // PUT THE TARGET CLICK SOUND HERE!
     endT = Date.now();
     if(score >= targets){
         endGame();
@@ -14,6 +16,8 @@ function check4win(){
         target.style.visibility = "hidden";
         setTimeout(teleport, waitTime);
         allTimes.push(endT-startT);
+        remainTargets--;
+        document.getElementById("remainingTargets").innerHTML = remainTargets;
     }
 }
 let allTimes = [];
@@ -36,6 +40,7 @@ function playGame(){
     } else {
         targets = 11;
     }
+    remainTargets = targets
     let timeRadio = document.getElementsByName('selectSpawnDelay');
     if (timeRadio[0].checked){
         waitTime = 0;
@@ -50,8 +55,10 @@ function playGame(){
 }
 function addClick(){
     totalClicks++;
+    // OPTIONAL: a regular click sound effect
 }
 function endGame(){
+    // GAME COMPLETED music thing
     target.removeEventListener("click", check4win);
     document.removeEventListener("click", addClick);
     allTimes.shift();
