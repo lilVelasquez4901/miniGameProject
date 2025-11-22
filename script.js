@@ -75,7 +75,7 @@ function endGame(){
     document.getElementById("start").style.visibility = "visible";
     target.style.visibility = "hidden";
     target.style.top = "50%";
-    target.style.top = "50%";
+    target.style.left = "50%";
 }
 
 document.getElementById("start").addEventListener("click",() => {
