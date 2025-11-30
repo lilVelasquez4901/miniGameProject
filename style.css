@@ -23,16 +23,16 @@
       background: linear-gradient(270deg, var(--light), var(--light2));
     }
     h1{
-        color: var(--lightText);
+        color: var(--bgText);
         font-family: Arial, Helvetica, sans-serif;
         text-decoration:overline;
     }
     p{
-        color: var(--lightText);
+        color: var(--bgText);
         font-family: Arial, Helvetica, sans-serif;
     }
     #info{
-        color: var(--lightText);
+        color: var(--bgText);
         text-decoration: underline;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -58,7 +58,7 @@
         text-decoration: solid;
     }
     #gameArea {
-        background: var(--lightText);
+        background: var(--bgText);
 
     }
     #target {
@@ -104,15 +104,15 @@
         color: var(--bgText);
     }
     label{
-        color: var(--lightText);
+        color: var(--bgText);
     }
     #targetMenu{
         position: absolute;
-        color: var(--lightText);
+        color: var(--bgText);
         right: 60%;
     }
     #spawnMenu{
         position: absolute;
-        color: var(--lightText);
+        color: var(--bgText);
         left: 60%;
     }
