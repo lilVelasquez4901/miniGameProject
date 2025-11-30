@@ -91,7 +91,7 @@
     #targetsRemaining{
         color: var(--bgText);
         position: absolute;
-        right: 20%;
+        right: 10%;
         top: 97%;
         visibility: hidden;
     }
