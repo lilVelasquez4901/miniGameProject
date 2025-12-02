@@ -4,7 +4,7 @@ let textColor1 = '#ece586';
 let textColor2 = '#545353';
 let backgroundColors = [
     'linear-gradient(270deg, #000000, #424146)',
-    'linear-gradient(270deg, #818181, #ffffff)'
+    'linear-gradient(270deg, #818181, #ffffff)',
 ];
 let defaultBackground = 0;
 let startButton = document.getElementById('start');
@@ -28,13 +28,15 @@ let reactionTiming = document.getElementById('reactionTime');
 function themeSwap(){
     body.style.background = backgroundColors[defaultBackground];
     defaultBackground = (defaultBackground + 1) % backgroundColors.length;
+    themeSwapper.style.background = backgroundColors[defaultBackground + 1];
+    startButton.style.background = backgroundColors[defaultBackground + 1];
 }
 themeSwapper.addEventListener('click', e=>{
     clickedAmount++
     if(clickedAmount % 2 == 0){
         themeSwapper.textContent = 'Light Mode';
         themeSwapper.style.color = textColor1;
-        themeSwapper.style.background = backgroundColors[defaultBackground];
+        themeSwapper.style.backgroundImage = backgroundColors[defaultBackground];
         body.style.background = backgroundColors[defaultBackground];
         type.style.color = textColor1;
         info.style.color = textColor1;
@@ -96,7 +98,7 @@ let totalClicks = 0;
 let remainTargets
 const target = document.getElementById("target");
 function check4win(){
-    // PUT THE TARGET CLICK SOUND HERE!
+    document.getElementById("hitFX").play();
     endT = Date.now();
     if(score >= targets){
         endGame();
@@ -145,12 +147,14 @@ function playGame(){
 }
 function addClick(){
     totalClicks++;
-    // OPTIONAL: a regular click sound effect
+    document.getElementById("clickFX").play()
 }
 function endGame(){
-    // GAME COMPLETED music thing
+    document.getElementById("endFX").play();
     target.removeEventListener("click", check4win);
     document.removeEventListener("click", addClick);
+    targetMenu.style.visibility = "visible";
+    spawnMenu.style.visibility = "visible";
     allTimes.shift();
     let average = 0;
     for (i=0;i<(targets-1);i++){

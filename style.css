@@ -10,7 +10,7 @@
     --bgText: #ece586;
     --light: #818181;
     --light2: #ffffff;
-    --lightText: #545353
+    --lightText: #545353;
 
     /* 
     Dark Mode: linear-gradient(270deg, var(--bg), var(--bg2)) color: var(--bgText);
