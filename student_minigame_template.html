@@ -8,13 +8,16 @@
 <body>
   <h1>Mini-Game Project</h1>
   <p>Reaction Click Game.</p>
+  <audio id="clickFX" src="./Sound_FX/computer-mouse-click-352734_dBzamEoT.mp3"></audio>
+  <audio id="endFX" src="./Sound_FX/goodresult-82807_Ov46PUiy.mp3"></audio>
+  <audio id="hitFX" src="./Sound_FX/item-collected-1-367087-1_LCLENCtP.mp3"></audio>
 
   <div id="gameArea">
     <div id="target"></div>
   </div>
 
   <button id="start">Start</button>
-  <p id="info">Click the button to begin! Targets will before you that you must click before they fade.</p>
+  <p id="info">Click the button to begin! Targets will appear that you must click as fast as you can!</p>
 
   <div id="spawnMenu"> Select the spawn delay:
   <input type="radio" name="selectSpawnDelay" id="1second" value="1">
@@ -24,15 +27,15 @@
   <input type="radio" name="selectSpawnDelay" id="3seconds" value="3">
   <label for="3seconds">3 Seconds</label>
   </div>
-  <div id="targetMenu">Select the target amounts:
+  <div id="targetMenu">Select the game length:
   <input type="radio" name="selectTargetAmount" id="number5" value="5">
-  <label for="5">5 Targets</label>
+  <label for="5">Short</label>
   <input type="radio" name="selectTargetAmount" id="number10" value="10">
-  <label for="10">10 Targets</label>
+  <label for="10">Medium</label>
   <input type="radio" name="selectTargetAmount" id="number20" value="20">
-  <label for="20">20 Targets</label>
+  <label for="20">Long</label>
   </div>
-  <div id="targetsRemaining">Targets remain</div>
+  <div id="targetsRemaining">Targets remaining:</div>
   <div id="missedClicks">Your score</div>
   <div id="reactionTime">Your time</div>
   <!-- <div id="currentRound">round</div> -->
