@@ -7,7 +7,7 @@ let totalClicks = 0;
 let remainTargets
 const target = document.getElementById("target");
 function check4win(){
-    // PUT THE TARGET CLICK SOUND HERE!
+    document.getElementById("hitFX").play();
     endT = Date.now();
     if(score >= targets){
         endGame();
@@ -56,12 +56,14 @@ function playGame(){
 }
 function addClick(){
     totalClicks++;
-    // OPTIONAL: a regular click sound effect
+    document.getElementById("clickFX").play();
 }
 function endGame(){
-    // GAME COMPLETED music thing
+    document.getElementById("endFX").play();
     target.removeEventListener("click", check4win);
     document.removeEventListener("click", addClick);
+    targetMenu.style.visibility = "visible";
+    spawnMenu.style.visibility = "visible";
     allTimes.shift();
     let average = 0;
     for (i=0;i<(targets-1);i++){
