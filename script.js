@@ -9,7 +9,6 @@ let backgroundColors = [
 let defaultBackground = 0;
 let startButton = document.getElementById('start');
 let themeSwapper = document.getElementById('themeSwitcher');
-let theme = document.getElementById('themeSwitcher');
 let clickedAmount = 0;
 let info = document.getElementById('info');
 let title = document.getElementById('titleText');
@@ -33,8 +32,10 @@ function themeSwap(){
 themeSwapper.addEventListener('click', e=>{
     clickedAmount++
     if(clickedAmount % 2 == 0){
-        themeSwapper.textContent = 'Light Mode'
-        body.style.background = backgroundColors[defaultBackground]
+        themeSwapper.textContent = 'Light Mode';
+        themeSwapper.style.color = textColor1;
+        themeSwapper.style.background = backgroundColors[defaultBackground];
+        body.style.background = backgroundColors[defaultBackground];
         type.style.color = textColor1;
         info.style.color = textColor1;
         title.style.color = textColor1;
@@ -50,9 +51,13 @@ themeSwapper.addEventListener('click', e=>{
         misclicks.style.color = textColor1;
         reactionTiming.style.color = textColor1;
         target.style.background = textColor1;
+        startButton.style.color = textColor1;
+        startButton.style.background = backgroundColors[defaultBackground];
     } else {
-        themeSwapper.textContent = 'Dark Mode'
-        body.style.background = backgroundColors[defaultBackground + 1]
+        themeSwapper.textContent = 'Dark Mode';
+        themeSwapper.style.color = textColor2;
+        themeSwapper.style.background = backgroundColors[defaultBackground + 1];
+        body.style.background = backgroundColors[defaultBackground + 1];
         type.style.color = textColor2;
         info.style.color = textColor2;
         title.style.color = textColor2;
@@ -68,9 +73,11 @@ themeSwapper.addEventListener('click', e=>{
         misclicks.style.color = textColor2;
         reactionTiming.style.color = textColor2;
         target.style.background = textColor2;
+        startButton.style.color = textColor2;
+        startButton.style.background = backgroundColors[defaultBackground + 1];
     };
 })
-theme.addEventListener('click', themeSwap)
+themeSwapper.addEventListener('click', themeSwap)
 function revealingText(){
     startButton.addEventListener("click", (e)=>{
         infoText.style.visibility = 'hidden';

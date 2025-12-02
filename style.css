@@ -44,8 +44,8 @@
         top: 60%;
         right: 48.5%;
         border-radius: 1rem;
-        color: var(--lightText);
-        background: linear-gradient(270deg, var(--light), var(--light2));
+        color: var(--bgText);
+        background: linear-gradient(270deg, var(--bg), var(--bg2));
         text-decoration: solid;
     }
     #themeSwitcher{
@@ -53,8 +53,8 @@
         top: 5%;
         right: 5%;
         border-radius: 1rem;
-        color: var(--lightText);
-        background: linear-gradient(270deg, var(--light), var(--light2));
+        color: var(--bgText);
+        background: linear-gradient(270deg, var(--bg), var(--bg2));
         text-decoration: solid;
     }
     #gameArea {
@@ -85,7 +85,7 @@
         color: var(--bgText);
         position: absolute;
         top:97%;
-        right:20%;
+        right:40%;
         visibility: hidden;
     }
     #targetsRemaining{
